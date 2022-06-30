@@ -1,0 +1,66 @@
+$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
+.sidenav{
+    position: fixed;
+    position: fixed;
+    bottom: 0px;
+
+    &[sidenav-orientation="left"]{
+        left: 2.5rem;
+        padding: 0;
+        ul{
+           list-style: none; 
+           margin: 0;
+           padding: 0;
+           &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 90px;
+                margin: 0px auto;
+                background-color: #fff;
+            }
+            li{
+                margin: 1rem 0rem;
+                a{
+                    color: #fff;
+                    svg {
+                        transition: $transition;
+                    }
+                    &:hover svg{
+                        color: #FAC748;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+
+    &[sidenav-orientation="right"]{
+        right: 2.5rem;
+        padding: 0;
+        a{
+            color: #fff;
+            text-decoration: none;
+            writing-mode: vertical-rl;
+            letter-spacing: 0.1em;
+            transition: $transition; 
+            &:hover {
+                color: #FAC748;
+                transform: translateY(-3px);
+            }
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 90px;
+            margin: 0px auto;
+            background-color: #fff;
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        display: none;
+    }
+}
