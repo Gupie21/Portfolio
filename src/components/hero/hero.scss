@@ -1,10 +1,11 @@
 %container{
     width: 100%;
     max-width: 800px;
+    min-height: 100vh;
+    color: #fff;
 }
 
 .hero-banner{
-    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,7 +17,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        height: 100vh;
         z-index: 100;
         &--inner{
             margin: 2rem;

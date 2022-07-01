@@ -3,12 +3,12 @@ $border-radius: 44px;
 %container{
     width: 100%;
     max-width: 800px;
+    margin: auto;
+    min-height: 100vh;
+    color: #fff;
 }
 .about-me{
     @extend %container;
-    margin: auto;
-    height: 100vh;
-    color: #fff;
     &__inner{
         margin: 2rem;
         display: flex;
@@ -48,8 +48,8 @@ $border-radius: 44px;
                         filter: sepia(0);
                     }
                     &:hover::after{
-                        top: 15px;
-                        left: 15px;
+                        top: 0px;
+                        left: 0px;
                     }
                     img{
                         width: 100%;

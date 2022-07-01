@@ -7,6 +7,9 @@ function AboutMe() {
     <section className='about-me'>
         <div className='about-me__inner'>
         <div>
+            <div className="section-title">
+              <h2>About Me</h2>
+            </div>
             <p>
             Hi! My name is Arturo and I like to develop visual solutions through programming and technology.<br /> 
             It all started in 2013, when I met for the first time the C language, something in me changed that day and motivated me to learn new things every day. <br />
