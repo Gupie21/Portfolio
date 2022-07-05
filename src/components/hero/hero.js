@@ -1,5 +1,4 @@
 import React from "react";
-import './hero.scss';
 import { CTABtn} from '../buttons/actionButtons';
 
 function HeroBanner(){
@@ -15,7 +14,7 @@ function HeroBanner(){
                 A software engineer that develop stunning digital<br/>
                 experiences who help´s business and people to stand out.
                 </p>
-                <CTABtn text="Know my path" src="/files/Resume.pdf"/>
+                <CTABtn text=" Know my path " src="/files/Resume.pdf"/>
                 </div>
             </div>
         </section>
