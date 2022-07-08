@@ -10,9 +10,6 @@ let theme = createTheme({
     },
     secondary: {
       main: '#FAC748',
-    },
-    transparent:{
-      main: '#fff0',
     }
   },
 });

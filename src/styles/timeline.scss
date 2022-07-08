@@ -24,8 +24,11 @@
             span{
                 padding: 0;
                 margin: 0;
+                font-size: 21px;
+                font-weight: 500;
                 a{
                     color: $primary-color;
+                    text-decoration: dotted;
                     &:hover{
                         opacity: 0.75;
                     }
@@ -48,7 +51,7 @@
                     list-style: none;
                     position: relative;
                     padding-left: 20px;
-                    font-weight: 500;
+                    margin-bottom: 21px;
                     &::before {
                         content: "▹";
                         position: absolute;
