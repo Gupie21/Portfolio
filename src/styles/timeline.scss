@@ -11,12 +11,21 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width:900px) {
+            margin: 0rem 2rem;
+        }
     }
     &__container{
        display: flex;
        justify-content: center;
        @media only screen and (max-width:900px) {
            flex-wrap: wrap;
+           .MuiTabs-flexContainer{
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 2.5rem;
+           }
        }
     }
     &__tab-container{
@@ -76,6 +85,9 @@
             left: 0;
             right: unset;
             border-radius: 100px;
+            @media only screen and (max-width:900px) {
+                width: 0;
+            }
         }
         &-selected{
             color: $primary-color;
@@ -85,5 +97,11 @@
     button{
         color: $secondary-color;
         border-left: 1px solid $secondary-color;
+        @media only screen and (max-width:900px) {
+            border: none;
+        }
+    }
+    @media only screen and (max-width:900px) {
+        min-height: auto;
     }
 }

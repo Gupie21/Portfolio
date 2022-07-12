@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles/app.scss'
+import './styles/_app.scss'
 import {ThemeProvider, createTheme, responsiveFontSizes, StyledEngineProvider} from '@mui/material/styles';
-import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline} from './components/components';
+import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline} from './components/_components';
 
 let theme = createTheme({
   palette: {
