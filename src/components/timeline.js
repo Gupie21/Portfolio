@@ -35,11 +35,11 @@ function Timeline() {
 
   return (
     <section className="timeline">
-    <div className="section-title">
-      <h2>
-        <span>02</span>Professional Path
-      </h2>
-    </div>
+      <div className="section-title">
+        <h2>
+          <span>02</span>Professional Path
+        </h2>
+      </div>
       <div className="timeline__inner">
         <div className="timeline__container">
           <Tabs
@@ -54,7 +54,6 @@ function Timeline() {
             <Tab label="Enapsys" />
             <Tab label="Torus" />
             <Tab label="Mutuo Financiera" />
-            <Tab label="IPADE" />
           </Tabs>
           <TabPanel value={value} index={0}>
             <div className="timeline__tab-container">
@@ -151,8 +150,9 @@ function Timeline() {
                     systems and applications according to their needs.
                   </li>
                   <li>
-                    Development all branding and marketing (SEO/SEM) of the brands managed
-                    by the company, as well as the maintenance of each one.
+                    Development all branding and marketing (SEO/SEM) of the
+                    brands managed by the company, as well as the maintenance of
+                    each one.
                   </li>
                 </ul>
               </div>
@@ -165,44 +165,6 @@ function Timeline() {
                   Fullstack Developer{" "}
                   <a href="https:/arrivia.com" target="_blank" rel="noreferrer">
                     Mutuo Financiera
-                  </a>
-                </span>
-              </div>
-              <div className="timeline__tab-container--date">
-                <span className="code-text">Jan 2017 - Nov 2020</span>
-              </div>
-              <div className="timeline__tab-container--content">
-                <ul>
-                  <li>
-                    Development of functionality from scratch for the company's
-                    CMB system built on Laravel and Angular.
-                  </li>
-                  <li>
-                    Engineered and maintained major features of CMB system using
-                    Angular, Laravel and CSS.
-                  </li>
-                  <li>
-                    Design and implement the user interface for a web
-                    application to help employees easily perform their tasks in
-                    the area of sales and credit analysis.
-                  </li>
-                  <li>
-                    Develop in PHP (Laravel) some important modules for risk
-                    analysis, leads interface, user roles and application for
-                    new clients.
-                  </li>
-                  <li>Design and branding all the company image.</li>
-                </ul>
-              </div>
-            </div>
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-            <div className="timeline__tab-container">
-              <div className="timeline__tab-container--title">
-                <span>
-                  Fullstack Developer{" "}
-                  <a href="https:/arrivia.com" target="_blank" rel="noreferrer">
-                    IPADE
                   </a>
                 </span>
               </div>

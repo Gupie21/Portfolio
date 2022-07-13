@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/_app.scss'
 import {ThemeProvider, createTheme, responsiveFontSizes, StyledEngineProvider} from '@mui/material/styles';
-import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline} from './components/_components';
+import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline, Portfolio} from './components/_components';
 
 let theme = createTheme({
   palette: {
@@ -25,6 +25,7 @@ function App() {
         <SidenavRight/>
         <AboutMe/>
         <Timeline/>
+        <Portfolio/>
       </ThemeProvider>
     </StyledEngineProvider>
   );
