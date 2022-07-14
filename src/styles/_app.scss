@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-$primary-color: #FAC748;
+$primary-color: #fac748;
 $secondary-color: #ecf0f3;
-$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 $border-radius: 44px;
 
-%container{
+%container {
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -13,23 +13,23 @@ $border-radius: 44px;
   color: #fff;
 }
 
-#root{
-    &::after {
-        background: url('../assets/images/bg/bg-home-4.jpg');
-        background-repeat: repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        content: " ";
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -10;
-      }
+#root {
+  &::after {
+    background: url("../assets/images/bg/bg-home-4.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+  }
 }
 
-.section-title{
+.section-title {
   display: flex;
   align-items: center;
   position: relative;
@@ -40,10 +40,10 @@ $border-radius: 44px;
     position: relative;
     bottom: -1px;
     margin-right: 10px;
-    color: #FAC748;
+    color: #fac748;
     font-size: 1rem;
     font-weight: 400;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
   }
   &::after {
     content: "";
@@ -53,10 +53,13 @@ $border-radius: 44px;
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: #FAC748;
+    background-color: #fac748;
   }
-  @media only screen and (max-width:900px) {
+  @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px 30px;
+    width: unset;
     &::after {
       width: 0;
       margin: 20px;
@@ -64,12 +67,12 @@ $border-radius: 44px;
   }
 }
 
-.code-text{
-  font-family: 'Press Start 2P', cursive;
+.code-text {
+  font-family: "Press Start 2P", cursive;
 }
 
-@import './sidenavs.scss';
-@import './hero.scss';
-@import './about-me.scss';
-@import './timeline.scss';
-@import './portfolio.scss';
+@import "./sidenavs.scss";
+@import "./hero.scss";
+@import "./about-me.scss";
+@import "./timeline.scss";
+@import "./portfolio.scss";

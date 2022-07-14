@@ -4,4 +4,81 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 5rem auto;
+    &-img{
+        max-height: 400px;
+        border-radius: 17px;
+    }
+    &-link{
+        color: $primary-color;
+        text-decoration: none;
+        text-shadow: 2px 1px rgba(0, 0, 0, 0.5);
+    }
+    &__inner{
+    }
+    &__card{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(12, 1fr);
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 3rem 0rem;
+
+        &:nth-of-type(even) {
+            .portfolio__card-img{ 
+                grid-area: 1 / 6 / -1 / -1;
+            }
+            .portfolio__card-content{
+                grid-area: 1 / 1 / -1 / 7;
+                text-align: left;
+            }
+        }
+          
+        &:nth-of-type(odd) {
+            .portfolio__card-img{ 
+                grid-column: 1 / 8;
+            }
+            .portfolio__card-content{
+                grid-column: 7 / -1;
+                text-align: right;
+            }
+        }
+
+        &-img{ 
+            grid-row: 1;
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 7px;
+                filter: sepia(100%) blur(1px) saturate(164%) opacity(90%);
+                transition: filter .25s linear;
+                &:hover{
+                    filter: sepia(0%) blur(0px) saturate(100%) opacity(100%);
+                }
+            }
+        }
+        &-content{
+            grid-row: 1;
+            &--title{
+                color: $secondary-color;
+            }
+            &--subtitle{
+
+            }
+            &--description{
+                background-color: #3b4956;
+                box-shadow: 0 10px 30px -15px var(--navy-shadow);
+                position: relative;
+                z-index: 2;
+                padding: 25px;
+                border-radius: 7px;
+                opacity: 0.75;
+            }
+        }
+    }
+    .MuiImageListItem-root{
+        .MuiImageListItemBar-root{
+            border-radius: 17px 17px 0px 0px;
+        }
+    }
 }

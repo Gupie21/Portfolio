@@ -1,126 +1,126 @@
 import React from "react";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
-function srcset(image, width, height, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${width * cols}&h=${
-      height * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 function Portfolio() {
   return (
     <section className="portfolio">
-        <div className="section-title">
-            <h2>
-                <span>03</span>Portfolio
-            </h2>
-        </div>
-        <ImageList
-        rowHeight={200}
-        gap={1}
-        >
+      <div className="section-title">
+        <h2>
+          <span>03</span>Portfolio
+          <OpenInNewIcon />
+        </h2>
+      </div>
+      <div className="portfolio__inner">
         {itemData.map((item) => {
-            const cols = item.featured ? 2 : 1;
-            const rows = item.featured ? 2 : 1;
-
-            return (
-            <ImageListItem key={item.img} cols={cols} rows={rows}>
-                <img
-                {...srcset(item.img, 250, 200, rows, cols)}
-                alt={item.title}
-                loading="lazy"
-                />
-                <ImageListItemBar
-                sx={{
-                    background:
-                    'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-                    'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-                }}
-                title={
-                    <a class="portfolio-link" href={item.author} target="_blank" rel="noreferrer">
-                        item.title
-                    </a>
-                }
-                position="top"
-                actionIcon={
-                    <IconButton
-                    sx={{ color: 'white' }}
-                    aria-label={`star ${item.title}`}
-                    >
-                    <OpenInNewIcon />
-                    </IconButton>
-                }
-                actionPosition="left"
-                />
-            </ImageListItem>
-            );
+          return (
+            <div className="portfolio__card" key={item.img}>
+              <div className="portfolio__card-img">
+                <a href={item.url.toString()} target="_blank" rel="noreferrer">
+                  <img src={item.img.toString()} alt={item.title.toString()} loading="lazy" />
+                </a>
+              </div>
+              <div className="portfolio__card-content">
+                <div className="portfolio__card-content--title">Project</div>
+                <div className="portfolio__card-content--subtitle">{item.title}</div>
+                <div className="portfolio__card-content--description">{item.description}</div>
+              </div>
+            </div>
+          );
         })}
-        </ImageList>
+      </div>
     </section>
   );
 }
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
-    featured: true
+    img: "../assets/images/portfolio/IMJUS.jpg",
+    title: "IMJUS",
+    url: "https://www.behance.net/gallery/148034359/IMJUS",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
-    author: '@rollelflex_graphy726',
+    img: "./assets/images/portfolio/Kaikou.jpg",
+    title: "Kaikou",
+    url: "https://www.behance.net/gallery/148034563/Kaikou",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
-    author: '@helloimnik',
+    img: "./assets/images/portfolio/Nexos.jpg",
+    title: "Nexo Integra",
+    url: "@https://www.behance.net/gallery/148041121/Nexo-Integra",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
+    img: "./assets/images/portfolio/Mabe.jpg",
+    title: "Mabe",
+    url: "https://www.behance.net/gallery/148040961/Mabe",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
+    img: "./assets/images/portfolio/Laud.jpg",
+    title: "Laud",
+    url: "https://www.behance.net/gallery/148034615/Laud",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
-    featured: true
+    img: "./assets/images/portfolio/MaaTalent.jpg",
+    title: "MAA Talent",
+    url: "https://www.behance.net/gallery/148040887/MAA-Talent",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
+    img: "./assets/images/portfolio/Totalplay.jpg",
+    title: "Totalplay",
+    url: "https://www.behance.net/gallery/148041345/Totalplay",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
+    img: "./assets/images/portfolio/Odontotec.jpg",
+    title: "Odontotec",
+    url: "https://www.behance.net/gallery/148041279/Odontotec",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
+    img: "./assets/images/portfolio/Vicarq.jpg",
+    title: "Vicarq",
+    url: "https://www.behance.net/gallery/148041439/Vicarq",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
+    img: "./assets/images/portfolio/Mutuo.jpg",
+    title: "Mutuo Financiera",
+    url: "https://www.behance.net/gallery/148041055/Mutuo-Financiera",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
+  },
+  {
+    img: "./assets/images/portfolio/Tecnolite.jpg",
+    title: "Tecnolite",
+    url: "https://www.behance.net/gallery/148041407/Tecnolite",
+    description: "Loren ipsum dolor",
+    tech: "Lorem ipsum",
+    clinks: "Lorem ipsum",
   },
 ];
-
 
 export { Portfolio };
