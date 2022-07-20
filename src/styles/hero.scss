@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.5px);
     border-radius: 7px;
     &__content{
         display: flex;
