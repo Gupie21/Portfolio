@@ -50,7 +50,7 @@
                 width: 100%;
                 height: auto;
                 border-radius: 7px;
-                filter: sepia(100%) blur(1px) saturate(164%) opacity(90%);
+                filter: sepia(100%) blur(0.5px) saturate(164%) opacity(90%);
                 transition: filter .25s linear;
                 &:hover{
                     filter: sepia(0%) blur(0px) saturate(100%) opacity(100%);
