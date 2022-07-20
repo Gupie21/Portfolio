@@ -15,6 +15,9 @@
         text-shadow: 2px 1px rgba(0, 0, 0, 0.5);
     }
     &__inner{
+        @media only screen and (max-width:900px) {
+            padding: 0rem 2rem;
+        }
     }
     &__card{
         display: grid;
@@ -27,25 +30,39 @@
         &:nth-of-type(even) {
             .portfolio__card-img{ 
                 grid-area: 1 / 6 / -1 / -1;
+                @media only screen and (max-width:900px) {
+                    grid-column: 1 / -1;
+                }
             }
             .portfolio__card-content{
                 grid-area: 1 / 1 / -1 / 7;
                 text-align: left;
+                @media only screen and (max-width:900px) {
+                    grid-column: 1 / -1;
+                }
             }
         }
           
         &:nth-of-type(odd) {
             .portfolio__card-img{ 
                 grid-column: 1 / 8;
+                @media only screen and (max-width:900px) {
+                    grid-column: 1 / -1;
+                }
             }
             .portfolio__card-content{
                 grid-column: 7 / -1;
                 text-align: right;
+                @media only screen and (max-width:900px) {
+                    grid-column: 1 / -1;
+                    text-align: left;
+                }
             }
         }
 
         &-img{ 
             grid-row: 1;
+            z-index: -1;
             img{
                 width: 100%;
                 height: auto;
@@ -55,15 +72,25 @@
                 &:hover{
                     filter: sepia(0%) blur(0px) saturate(100%) opacity(100%);
                 }
+                @media only screen and (max-width:900px) {
+                    height: 100%;
+                }
+            }
+            @media only screen and (max-width:900px) {
+                height: 100%;
             }
         }
         &-content{
             grid-row: 1;
             &--title{
-                color: $secondary-color;
+                color: $primary-color;
+                font-family: $gamer-font;
+                font-size: 0.7rem;
             }
             &--subtitle{
-
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 21px;
             }
             &--description{
                 background-color: #3b4956;
@@ -74,6 +101,23 @@
                 border-radius: 7px;
                 opacity: 0.75;
             }
+            &--techs{
+                color: $secondary-color;
+                background: #5b491c4a;
+                backdrop-filter: blur(2px);
+                text-align: center;
+                border-radius: 7px;
+                padding: 1rem 0.5rem;
+            }
+            @media only screen and (max-width:900px) {
+                background-color: #3b495680;
+                padding: 0.5rem;
+                border-radius: 7px
+            }
+
+        }
+        @media only screen and (max-width:900px) {
+            margin: 17px 0px;
         }
     }
     .MuiImageListItem-root{

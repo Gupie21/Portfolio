@@ -19,8 +19,11 @@
     &__container{
        display: flex;
        justify-content: center;
+       backdrop-filter: blur(1px);
+       border-radius: 7px;
        @media only screen and (max-width:900px) {
            flex-wrap: wrap;
+           backdrop-filter: blur(0px);
            .MuiTabs-flexContainer{
                 flex-direction:row;
                 flex-wrap: wrap;
@@ -77,6 +80,9 @@
     .MuiTabs{
         &-root{
             padding-top: 24px;
+            @media only screen and (max-width:900px) {
+                padding: 0;
+            }
         }
         &-vertical{
             min-width: 150px;

@@ -4,6 +4,7 @@ $primary-color: #fac748;
 $secondary-color: #ecf0f3;
 $transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 $border-radius: 44px;
+$gamer-font: "Press Start 2P", cursive;
 
 %container {
   width: 100%;
@@ -36,14 +37,17 @@ $border-radius: 44px;
   margin: 10px 30px 40px;
   width: 100%;
   white-space: nowrap;
+  h2 {
+    font-size: 1.7rem;
+  }
   span {
     position: relative;
     bottom: -1px;
     margin-right: 10px;
     color: #fac748;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    font-family: "Press Start 2P", cursive;
+    font-family: $gamer-font;
   }
   &::after {
     content: "";
@@ -68,7 +72,7 @@ $border-radius: 44px;
 }
 
 .code-text {
-  font-family: "Press Start 2P", cursive;
+  font-family: $gamer-font;
 }
 
 @import "./sidenavs.scss";
