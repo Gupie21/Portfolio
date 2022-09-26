@@ -110,7 +110,7 @@ const featureData = [
   }
 ];
 
-const otherData = [
+/*const otherData = [
   {
     img: "./assets/images/portfolio/Laud.jpg",
     title: "Laud",
@@ -160,6 +160,6 @@ const otherData = [
     description: "Loren ipsum dolor",
     tech: "Lorem ipsum",
   }
-];
+];*/
 
 export { Portfolio };
