@@ -67,19 +67,6 @@ function Portfolio() {
           );
         })}
       </div>
-      <div className="section-title">
-        <h2>
-          <span>04</span>Other Noteworthy Projects
-        </h2>
-      </div>
-      <div>
-
-      {otherData.map((item) => {
-          return (
-            <div key={item.img}>{item.title}</div>
-          );
-        })}
-      </div>
     </section>
   );
 }
