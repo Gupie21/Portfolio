@@ -44,7 +44,7 @@ $gamer-font: "Press Start 2P", cursive;
     position: relative;
     bottom: -1px;
     margin-right: 10px;
-    color: #fac748;
+    color: $primary-color;
     font-size: 1.25rem;
     font-weight: 400;
     font-family: $gamer-font;
@@ -57,7 +57,7 @@ $gamer-font: "Press Start 2P", cursive;
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: #fac748;
+    background-color: $primary-color;
   }
   @media only screen and (max-width: 900px) {
     flex-wrap: wrap;
@@ -73,6 +73,10 @@ $gamer-font: "Press Start 2P", cursive;
 
 .code-text {
   font-family: $gamer-font;
+}
+
+.primary-text{
+  color: $primary-color
 }
 
 @import "./sidenavs.scss";

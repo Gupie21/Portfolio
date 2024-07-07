@@ -1,41 +1,25 @@
 import React from "react";
-import profileImg from "../assets/images/stock/profile.jpg";
+import profileImg from "../assets/images/stock/me.jpg";
 
 function AboutMe() {
   return (
     <section className="about-me">
-    <div className="section-title">
-      <h2>
-        <span>01</span>About Me
-      </h2>
-    </div>
+      <div className="section-title">
+        <h2>
+          <span>01</span>About Me
+        </h2>
+      </div>
       <div className="about-me__inner">
         <div>
           <p>
-            Hi! My name is Arturo and I like to develop visual solutions through
-            programming and technology.
-            <br />
-            It all started in 2013, when I met for the first time the C
-            language, something in me changed that day and motivated me to learn
-            new things every day. <br />
-            Today, I have had the privilege to work from{" "}
-            <a
-              href="https://mutuofinanciera.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              a Fintech
-            </a>{" "}
-            and in a{" "}
-            <a href="https://www.enapsys.com/" target="_blank" rel="noreferrer">
-              technology consulting firm
-            </a>
-            .
+            Hi, I'm Arturo Miranda and I'm passionate about developing visual
+            solutions through programming and technology. My interest in this
+            field began in 2013, when I met the C language, which awakened in me
+            a continuous motivation to learn and improve.{" "}
           </p>
           <p>
             Currently, my main focus is to create accessible and intuitive
-            digital products and experiences at Arrivia for a wide variety of
-            clients. <br />
+            digital products and experiences at LSEG in B2B projects. <br />
             I also freelance in my spare time, so I have a great portfolio to
             showcase. <br />
           </p>

@@ -32,9 +32,9 @@
                         z-index: -1;
                         border: 7px double;
                         border-top-color: $primary-color;
-                        border-right-color: #fabc48;
+                        border-right-color: $primary-color;
                         border-bottom-color: $primary-color;
-                        border-left-color: #fabc48;
+                        border-left-color: $primary-color;
                         transition: $transition;
                     }
                     &:hover img{
@@ -52,6 +52,15 @@
                         border-radius: $border-radius;
                         filter: sepia(1);
                         transition: filter .25s linear;
+                    }
+                    @media only screen and (max-width:900px) {
+                        img{
+                            filter: sepia(0);
+                        }
+                        &::after{
+                            top: 0px;
+                            left: 0px;
+                        }
                     }
                 }
             }
