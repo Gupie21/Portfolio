@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import "./variables";
 
-$primary-color: #fac748;
-$secondary-color: #ecf0f3;
-$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-$border-radius: 44px;
-$gamer-font: "Press Start 2P", cursive;
+@import "./sidenavs.scss";
+@import "./hero.scss";
+@import "./about-me.scss";
+@import "./timeline.scss";
+@import "./portfolio.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 %container {
   width: 100%;
@@ -27,6 +29,11 @@ $gamer-font: "Press Start 2P", cursive;
     bottom: 0;
     left: 0;
     z-index: -10;
+
+    @media only screen and (max-width: 900px) {
+      background-attachment: scroll;
+      background-size: auto;
+    }
   }
 }
 
@@ -78,9 +85,3 @@ $gamer-font: "Press Start 2P", cursive;
 .primary-text{
   color: $primary-color
 }
-
-@import "./sidenavs.scss";
-@import "./hero.scss";
-@import "./about-me.scss";
-@import "./timeline.scss";
-@import "./portfolio.scss";

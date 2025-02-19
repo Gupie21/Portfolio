@@ -29,8 +29,23 @@ const Timeline = () => {
 
   const tabs = [
     {
+      label: "KPMG",
+      date: "May 2024 - Present",
+      company: "KPMG / KTSA",
+      url: "https://www.ktsa.com.mx/",
+      role: "SR UI/UX Frontend Developer",
+      points: [
+        "Developed a custom design system and component library in Angular from scratch, ensuring scalability and consistency across multiple applications.",
+        "Implemented and maintained SCSS-based styling for all UI components, optimizing performance and maintainability.",
+        "Designed and built visually engaging components for Azure Power Apps, enhancing user interaction and usability.",
+        "Collaborated with cross-functional teams to integrate Angular Material and custom UI solutions within enterprise applications.",
+        "Ensured seamless integration between front-end components and back-end services, improving system efficiency and responsiveness.",
+        "Applied best practices in modular CSS and SCSS architecture to create reusable styles and improve code maintainability.",
+      ]
+    },
+    {
       label: "LSEG",
-      date: "Sept 2023 - Present",
+      date: "Sept 2023 - May 2024",
       company: "London Stock Exchange Group | at Luxoft",
       url: "https://lseg.com",
       role: "Software Engineer",
