@@ -8,7 +8,7 @@ function PrimaryActionBtn(props){
 }
 
 function CTABtn(props){
-    return <Button size="large" variant="outlined" href={props.src}  target="_blank" download><ArrowBackIosOutlinedIcon/> {props.text} <ArrowForwardIosOutlinedIcon/></Button>;
+    return <Button size="large" variant="outlined" href={props.src}  target="_blank" sx={{ borderWidth: 3 }} download><ArrowBackIosOutlinedIcon/> {props.text} <ArrowForwardIosOutlinedIcon/></Button>;
 }
 
 export {PrimaryActionBtn, CTABtn};

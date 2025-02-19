@@ -1,16 +1,17 @@
-.sidenav{
-    position: fixed;
-    position: fixed;
+.sidenav {
+    position: fixed;  // Eliminada la línea duplicada
     bottom: 0px;
 
-    &[sidenav-orientation="left"]{
+    &[sidenav-orientation="left"] {
         left: 2.5rem;
         padding: 0;
-        ul{
-           list-style: none; 
-           margin: 0;
-           padding: 0;
-           &::after {
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            &::after {
                 content: "";
                 display: block;
                 width: 1px;
@@ -18,14 +19,17 @@
                 margin: 0px auto;
                 background-color: $secondary-color;
             }
-            li{
-                margin: 1rem 0rem;
-                a{
+
+            li {
+                margin: 1rem 0;
+
+                a {
                     color: $secondary-color;
                     svg {
                         transition: $transition;
                     }
-                    &:hover svg{
+
+                    &:hover svg {
                         color: $primary-color;
                         transform: translateY(-3px);
                     }
@@ -34,20 +38,23 @@
         }
     }
 
-    &[sidenav-orientation="right"]{
+    &[sidenav-orientation="right"] {
         right: 2.5rem;
         padding: 0;
-        a{
+        
+        a {
             color: $secondary-color;
             text-decoration: none;
             writing-mode: vertical-rl;
             letter-spacing: 0.1em;
-            transition: $transition; 
+            transition: $transition;
+
             &:hover {
                 color: $primary-color;
                 transform: translateY(-3px);
             }
         }
+
         &::after {
             content: "";
             display: block;
@@ -58,7 +65,7 @@
         }
     }
 
-    @media only screen and (max-width:900px) {
+    @media only screen and (max-width: 900px) {
         display: none;
     }
 }

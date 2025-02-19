@@ -6,10 +6,10 @@ import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline, Portfolio} from
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#FAC748',
+      main: '#22ffe2',
     },
     secondary: {
-      main: '#FAC748',
+      main: '#fa9848',
     }
   },
 });
