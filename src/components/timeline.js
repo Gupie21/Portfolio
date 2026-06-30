@@ -6,7 +6,7 @@ const timelineEntries = [
   {
     label: "KPMG",
     date: "May 2024 - Present",
-    company: "KPMG / KTSA",
+    company: "KPMG Technology Services Americas",
     url: "https://www.ktsa.com.mx/",
     role: "SR UI/UX Frontend Developer",
     points: [
