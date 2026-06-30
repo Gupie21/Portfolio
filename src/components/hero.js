@@ -1,25 +1,31 @@
 import React from "react";
-import { CTABtn } from "./actionButtons";
+import { CTABtn, PrimaryActionBtn } from "./actionButtons";
 
 function HeroBanner() {
   return (
-    <section className="hero-banner">
+    <section className="hero-banner reveal-section">
       <div className="hero-banner__content">
         <div className="hero-banner__content--inner">
-          <h1>
-            <span className="code-text">Hello folks,</span>
-            <br />
+          <div className="hero-banner__eyebrow stagger-item">Software Engineer | UI/UX  Gurú</div>
+          <h1 className="stagger-item">
             I&apos;m Arturo Miranda.
           </h1>
-          <p>
-            I craft polished digital experiences that help businesses and people stand out.
+          <p className="stagger-item">
+            I design and build polished interfaces for brands, products, and business teams.
           </p>
-          <CTABtn
-            text="Download resume"
-            src="/files/80294_Diaz_Arturo_2024-03-13.pdf"
-            download
-            ariaLabel="Download Arturo Miranda resume"
-          />
+          <div className="hero-banner__actions stagger-item">
+            <PrimaryActionBtn
+              text="View projects"
+              src="#portfolio"
+              ariaLabel="Scroll to portfolio projects"
+            />
+            <CTABtn
+              text="Download resume"
+              src="/files/80294_Diaz_Arturo_2024-03-13.pdf"
+              download
+              ariaLabel="Download Arturo Miranda resume"
+            />
+          </div>
         </div>
       </div>
     </section>

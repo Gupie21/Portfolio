@@ -15,14 +15,35 @@
         z-index: 100;
         &--inner{
             margin: 2rem;
+            max-width: 760px;
+            .hero-banner__eyebrow{
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+                color: $accent-color;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                font-size: 0.78rem;
+                font-weight: 700;
+            }
             h1{
                 font-size: 4.2rem;
+                line-height: 0.95;
+                margin: 0;
             }
             p{
-                font-size: 1.5rem;
+                font-size: 1.25rem;
+                max-width: 30rem;
+                margin: 1.5rem 0 2rem;
             }
-            span{
-                font-size: 1.5rem;
+            .hero-banner__actions{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                .MuiButton-root{
+                    min-width: 180px;
+                }
             }
             a{
                 font-family: 'Press Start 2P', cursive;
@@ -31,5 +52,13 @@
     }
     @media only screen and (max-width:900px) {
         backdrop-filter: blur(0px);
+        &__content--inner{
+            h1{
+                font-size: 2.6rem;
+            }
+            p{
+                font-size: 1.05rem;
+            }
+        }
     }
 }

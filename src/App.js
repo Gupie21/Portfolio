@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/_app.scss'
 import {ThemeProvider, createTheme, responsiveFontSizes, StyledEngineProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -31,6 +31,26 @@ let theme = createTheme({
 theme = responsiveFontSizes(theme);
 
 function App() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal-section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>

@@ -4,7 +4,19 @@ import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 
 function PrimaryActionBtn(props){
-    return <Button size="large" variant="contained" href={props.src} sx={{ textTransform: 'none' }}>{props.text}</Button>;
+    return (
+        <Button
+            size="large"
+            variant={props.variant || "contained"}
+            href={props.src}
+            target={props.target}
+            rel={props.rel}
+            aria-label={props.ariaLabel || props.text}
+            sx={{ textTransform: 'none', ...props.sx }}
+        >
+            {props.text}
+        </Button>
+    );
 }
 
 function CTABtn(props){

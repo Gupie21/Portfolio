@@ -3,14 +3,14 @@ import profileImg from "../assets/images/stock/me.jpg";
 
 function AboutMe() {
   return (
-    <section className="about-me">
+    <section className="about-me reveal-section">
       <div className="section-title">
         <h2>
           <span>01</span>About Me
         </h2>
       </div>
       <div className="about-me__inner">
-        <div>
+        <div className="stagger-item">
           <p>
             Hi, I'm Arturo Miranda, and I am dedicated to creating visual
             solutions through programming and technology. My journey in this

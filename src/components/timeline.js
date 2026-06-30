@@ -110,14 +110,14 @@ const Timeline = () => {
   };
 
   return (
-    <section className="timeline">
+    <section className="timeline reveal-section">
       <div className="section-title">
         <h2>
           <span>02</span>Professional Path
         </h2>
       </div>
       <div className="timeline__inner">
-        <div className="timeline__container">
+        <div className="timeline__container stagger-item">
           <Tabs
             orientation="vertical"
             variant="scrollable"
