@@ -19,7 +19,7 @@ function AboutMe() {
           </p>
           <p>
             Currently, my main focus is to create accessible and intuitive
-            digital products and experiences at LSEG in B2B projects. <br />
+            digital products and experiences at KPMG in B2B projects. <br />
             I also freelance in my spare time, so I have a great portfolio to
             showcase. <br />
           </p>
