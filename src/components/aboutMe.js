@@ -12,10 +12,10 @@ function AboutMe() {
       <div className="about-me__inner">
         <div>
           <p>
-            Hi, I'm Arturo Miranda and I'm passionate about developing visual
-            solutions through programming and technology. My interest in this
-            field began in 2013, when I met the C language, which awakened in me
-            a continuous motivation to learn and improve.{" "}
+            Hi, I'm Arturo Miranda, and I am dedicated to creating visual
+            solutions through programming and technology. My journey in this
+            field started in 2013 when I discovered the C language, which ignited
+            my passion for continuous learning and improvement.{" "}
           </p>
           <p>
             Currently, my main focus is to create accessible and intuitive
@@ -40,7 +40,7 @@ function AboutMe() {
         </div>
         <div>
           <picture>
-            <img src={profileImg} alt="profile" />
+            <img src={profileImg} alt="Arturo Miranda portrait" loading="lazy" decoding="async" />
           </picture>
         </div>
       </div>

@@ -4,17 +4,39 @@ import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
 
+const portfolioImageBase = "/assets/images/portfolio";
+const placeholderPalette = ["#0f172a", "#12333f", "#3b1f5e", "#5b2f1a", "#153b2d", "#2d2a5a"];
+
+const getPlaceholderColor = (title) => {
+  const hash = title.split("").reduce((accumulator, character) => accumulator + character.charCodeAt(0), 0);
+  return placeholderPalette[hash % placeholderPalette.length];
+};
+
 const ProjectCard = ({ item, isFeatured = false }) => (
-  <div className="portfolio__card" key={item.title}>
+  <div className="portfolio__card">
     {isFeatured && (
       <div className="portfolio__card-img">
-        <a href={item.projectURL || item.siteURL} target="_blank" rel="noreferrer">
-          <img
-            src={item.img}
-            alt={item.title}
-            loading="lazy"
-          />
-        </a>
+        {item.img ? (
+          <a href={item.projectURL || item.siteURL} target="_blank" rel="noreferrer" aria-label={`Open ${item.title}`}>
+            <img
+              src={item.img}
+              alt={`${item.title} project preview`}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        ) : (
+          <a
+            className="portfolio__card-img--placeholder"
+            href={item.projectURL || item.siteURL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${item.title}`}
+            style={{ backgroundColor: getPlaceholderColor(item.title) }}
+          >
+            <span>{item.title}</span>
+          </a>
+        )}
       </div>
     )}
     
@@ -38,6 +60,7 @@ const ProjectCard = ({ item, isFeatured = false }) => (
             href={item.projectURL}
             target="_blank"
             rel="noreferrer"
+            aria-label={`View ${item.title} project on Behance`}
           >
             <Tooltip title="View Project">
               <IconButton>
@@ -53,6 +76,7 @@ const ProjectCard = ({ item, isFeatured = false }) => (
             href={item.siteURL}
             target="_blank"
             rel="noreferrer"
+            aria-label={`Visit ${item.title} live site`}
           >
             <Tooltip title="View Site">
               <IconButton>
@@ -95,16 +119,55 @@ function Portfolio() {
 
 const featureData = [
   {
-    img: "../assets/images/portfolio/QuienOpina.jpg",
-    title: "Quien Opina",
-    projectURL: "https://www.behance.net/gallery/219625413/Quien-Opina",
+    title: "Diego Padilla Weddings",
+    projectURL: "",
+    siteURL: "https://diegopadillaweddings.com/",
     description:
-      "QuienOpina, built with Python and Angular, is a platform that generates statistical reports on public sentiment about products, companies, or individuals from online and social media sources. It helps people and businesses target their marketing and advertising campaigns by providing insights into public acceptance and opinions.",
-    tech: "Angular | Tailwind | SCSS | Python | Netlify | Figma | Adobe CC",
-    siteURL: "",
+      "Wedding photography and events website built with WordPress, PHP, CSS, JavaScript, Elementor, and AWS, focused on presenting premium services with a polished visual experience.",
+    tech: "WordPress | PHP | CSS | JavaScript | Elementor | AWS",
   },
   {
-    img: "../assets/images/portfolio/Kintsugi.jpg",
+    title: "Vertex Pro",
+    projectURL: "",
+    siteURL: "https://vertexpro.company/",
+    description:
+      "Corporate website built with WordPress, PHP, CSS, JavaScript, Elementor, and AWS to present services and brand positioning with a clean, conversion-focused layout.",
+    tech: "WordPress | PHP | CSS | JavaScript | Elementor | AWS",
+  },
+  {
+    title: "Casa Forastero",
+    projectURL: "",
+    siteURL: "https://casaforastero.com/",
+    description:
+      "Ecommerce and hospitality experience built with TypeScript, CSS, and Shopify, designed to communicate the brand and drive user interaction through a modern storefront.",
+    tech: "TypeScript | CSS | Shopify",
+  },
+  {
+    title: "GSM Marketing",
+    projectURL: "",
+    siteURL: "https://gsmmarketing.com.mx/",
+    description:
+      "Marketing agency website built with WordPress, PHP, CSS, JavaScript, Elementor, and AWS to communicate services, credibility, and lead-generation goals.",
+    tech: "WordPress | PHP | CSS | JavaScript | Elementor | AWS",
+  },
+  {
+    title: "Amarine",
+    projectURL: "",
+    siteURL: "https://amarine-phi.vercel.app/",
+    description:
+      "React-based site built with CSS, TypeScript, and AWS, using a lightweight frontend structure and a modern presentation to showcase the brand.",
+    tech: "React | CSS | TypeScript | AWS",
+  },
+  {
+    title: "Umbrales",
+    projectURL: "",
+    siteURL: "https://umbrales.com.mx/",
+    description:
+      "Corporate website built with WordPress, PHP, CSS, JavaScript, Elementor, and AWS, designed to present the brand with a clean and professional visual system.",
+    tech: "WordPress | PHP | CSS | JavaScript | Elementor | AWS",
+  },
+  {
+    img: `${portfolioImageBase}/Kintsugi.jpg`,
     title: "Kintsugi",
     projectURL: "",
     description:
@@ -113,85 +176,94 @@ const featureData = [
     siteURL: "https://kintsugimfa.netlify.app/",
   },
   {
-    img: "../assets/images/portfolio/BlueWire.jpg",
+    img: `${portfolioImageBase}/BlueWire.jpg`,
     title: "Blue Wire",
     projectURL: "",
     description:
       "Blue Wire is an environmental magazine built on WordPress, covering global and local ecological issues. It features sections like 'The Story of the Week' and 'Radar Ambiental,' offering insights on sustainability, climate change, and conservation through engaging content and visuals.",
-    tech: "WordPress | Elementor | SEO Optimization | CSS | Afiinity Designer",
+    tech: "WordPress | Elementor | SEO Optimization | CSS | Affinity Designer",
     siteURL: "https://bluewire.mx/",
   },
   {
-    img: "../assets/images/portfolio/Opulence.jpg",
-    title: "Opulence",
-    projectURL: "",
-    description: 
-      "Opulence is a Mexican fashion magazine built on WordPress, dedicated to showcasing the latest trends, designers, and luxury lifestyle. Featuring sections on haute couture, emerging talents, and style guides, it delivers high-end fashion insights through visually striking content.",
-    tech: "WordPress | Elementor | SEO Optimization | CSS | Afiinity Designer",
-    siteURL: "https://opulenc.com/",
-  },
-  {
-    img: "../assets/images/portfolio/Rtoutdoorl.jpg",
+    img: `${portfolioImageBase}/Rtoutdoorl.jpg`,
     title: "RT Outdoor Living",
     projectURL: "",
     description:
       "This project for RT Lawn Services & Outdoor Living LLC, was built a captivating outdoor haven using WordPress, Elementor, and CSS, hosted on AWS Lightsail. Implementing intuitive interface, designed to showcase their extensive landscaping services.",
-    tech: "Wordpress | Woocommerce | Elementor | CSS | AWS Lightsail | Adobe CC",
+    tech: "WordPress | WooCommerce | Elementor | CSS | AWS Lightsail | Adobe CC",
     siteURL: "https://rtoutdoorliving.com/",
   },
   {
-    img: "../assets/images/portfolio/IMJUS.jpg",
+    img: `${portfolioImageBase}/IMJUS.jpg`,
     title: "IMJUS",
     projectURL: "https://www.behance.net/gallery/148034359/IMJUS",
     description:
-      "Build a site in a Laravel environment with Wordpress that allows people to learn more about this institution, its certifications, seminars and courses through a friendly and intuitive platform. ",
-    tech: "Laravel | Wordpress | AWS Lightsail | Adobe CC",
+      "Built a site in a Laravel environment with WordPress that allows people to learn more about this institution, its certifications, seminars, and courses through a friendly and intuitive platform.",
+    tech: "Laravel | WordPress | AWS Lightsail | Adobe CC",
     siteURL: "https://imjus.org.mx/",
   },
   {
-    img: "../assets/images/portfolio/Globaljuris.jpg",
+    img: `${portfolioImageBase}/Globaljuris.jpg`,
     title: "GlobalJuris",
     projectURL: "",
     description:
       "This website dedicated to José Luis Vargas Valdez, a Mexican lawyer and jurist, is built using React with SCSS and hosted on Netlify. It serves as a modern platform to showcase his 25 years of experience in Constitutional, Administrative, and Electoral Law, including his tenure as a litigating lawyer at JL Vargas y Asociados S.C.",
-    tech: "React | SCSS  | Netlify | Adobe CC",
+    tech: "React | SCSS | Netlify | Adobe CC",
     siteURL: "https://globaljuris.com.mx/",
   },
   {
-    img: "./assets/images/portfolio/Mabe.jpg",
+    img: `${portfolioImageBase}/Mabe.jpg`,
     title: "Mabe",
     projectURL: "https://www.behance.net/gallery/148040961/Mabe",
     description:
-      "Lead and build a project hand in hand with Mabe's designers a site mounted on SAP Hybris for the sale of products of the brand, taking into account the needs of the company and creating a good UX for end users of this platform.",
-    tech: "SCSS | Javascript | Hybris(Java) | Balsamiq | Adobe CC",
+      "Led and built a project hand in hand with Mabe's designers: a site mounted on SAP Hybris for the sale of brand products, taking into account the company's needs and creating a solid UX for end users.",
+    tech: "SCSS | JavaScript | Hybris (Java) | Balsamiq | Adobe CC",
     siteURL: "https://mabe.com.mx/",
   },
   {
-    img: "./assets/images/portfolio/Tecnolite.jpg",
+    img: `${portfolioImageBase}/Tecnolite.jpg`,
     title: "Tecnolite",
     projectURL: "https://www.behance.net/gallery/148041407/Tecnolite",
     description:
       "Visually improve the platform through end-user testing, taking into account the target market and best practices for the generation of a new UI on your sales site.",
-    tech: "SCSS | Javascript | Hybris(Java) | Balsamiq | Adobe CC",
+    tech: "SCSS | JavaScript | Hybris (Java) | Balsamiq | Adobe CC",
     siteURL: "https://tecnolite.mx/",
   },
   {
-    img: "./assets/images/portfolio/Kaikou.jpg",
+    img: `${portfolioImageBase}/Kaikou.jpg`,
     title: "Kaikou",
     projectURL: "https://www.behance.net/gallery/148034563/Kaikou",
     description:
-      "Build and design a Wordpress multisite site that hosts vendors, sellers and users in a custom marketplace programmed with SCSS, PHP and Javascript.",
-    tech: "Woocommerce | Wordpress | Laravel | PHP | Javascript | SCSS | AWS Lightsail | Adobe CC",
+      "Built and designed a WordPress multisite that hosts vendors, sellers, and users in a custom marketplace programmed with SCSS, PHP, and JavaScript.",
+    tech: "WooCommerce | WordPress | Laravel | PHP | JavaScript | SCSS | AWS Lightsail | Adobe CC",
     siteURL: "http://kaikoucbd.com/",
   },
   {
-    img: "../assets/images/portfolio/Mrsoul.jpg",
+    img: `${portfolioImageBase}/Mrsoul.jpg`,
     title: "MR Soul",
     projectURL: "https://www.behance.net/gallery/219626661/MR-Soul-Eyewear",
     description:
-      "MrSoul is an eCommerce platform built on WooCommerce and WordPress, dedicated to offering an extensive range of premium optical fashion products, including stylish sunglasses and frames. We focus on providing an efficient and satisfying shopping experience, supported by the reliability and flexibility of these leading platforms. Our design ethos emphasizes a minimalist and elegant UI/UX for users.",
-    tech: " Wordpress | Woocommerce | PHP | CSS | SEO | SEM | Afiinity Designer",
+      "MrSoul is an eCommerce platform built on WooCommerce and WordPress, dedicated to offering an extensive range of premium optical fashion products, including stylish sunglasses and frames. The design ethos emphasizes a minimalist and elegant UI/UX.",
+    tech: "WordPress | WooCommerce | PHP | CSS | SEO | SEM | Affinity Designer",
     siteURL: "",
+  },
+  {
+    img: `${portfolioImageBase}/QuienOpina.jpg`,
+    title: "Quien Opina",
+    projectURL: "https://www.behance.net/gallery/219625413/Quien-Opina",
+    description:
+      "QuienOpina, built with Python and Angular, is a platform that generates statistical reports on public sentiment about products, companies, or individuals from online and social media sources. It helps people and businesses target their marketing and advertising campaigns by providing insights into public acceptance and opinions.",
+    tech: "Angular | Tailwind | SCSS | Python | Netlify | Figma | Adobe CC",
+    siteURL: "",
+  },
+  {
+    img: `${portfolioImageBase}/Opulence.jpg`,
+    title: "Opulence",
+    projectURL: "",
+    description: 
+      "Opulence is a Mexican fashion magazine built on WordPress, dedicated to showcasing the latest trends, designers, and luxury lifestyle. Featuring sections on haute couture, emerging talents, and style guides, it delivers high-end fashion insights through visually striking content.",
+    tech: "WordPress | Elementor | SEO Optimization | CSS | Affinity Designer",
+    siteURL: "https://opulenc.com/",
   },
 ];
 
@@ -209,12 +281,12 @@ const otherData = [
   {
     title: "Go Club Freedom",
     projectURL: "https://goclubfreedom.com.mx/",
-    tech: "Vue Js | SCSS | Figma",
+    tech: "Vue.js | SCSS | Figma",
   },
   {
     title: "Gov Vacations Rewards",
     projectURL: "https://govvacationrewards.com/",
-    tech: "Vanila JS | SCSS | Figma",
+    tech: "Vanilla JS | SCSS | Figma",
   },
   {
     title: "Laud",
@@ -229,7 +301,7 @@ const otherData = [
   {
     title: "Totalplay",
     projectURL: "https://www.behance.net/gallery/148041345/Totalplay",
-    tech: "Vanilla JS | HTML | CSS | Boostrap",
+    tech: "Vanilla JS | HTML | CSS | Bootstrap",
   },
   {
     title: "Vicarq",

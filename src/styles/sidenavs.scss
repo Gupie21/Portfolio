@@ -1,8 +1,8 @@
 .sidenav {
-    position: fixed;  // Eliminada la línea duplicada
+    position: fixed;
     bottom: 0px;
 
-    &[sidenav-orientation="left"] {
+    &[data-orientation="left"] {
         left: 2.5rem;
         padding: 0;
         
@@ -38,7 +38,7 @@
         }
     }
 
-    &[sidenav-orientation="right"] {
+    &[data-orientation="right"] {
         right: 2.5rem;
         padding: 0;
         

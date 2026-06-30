@@ -100,6 +100,29 @@
         &-img{ 
             grid-row: 1;
             z-index: 0;
+            &--placeholder {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 360px;
+                border-radius: 7px;
+                padding: 2rem;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                box-shadow: 0 12px 35px -18px rgba(0, 0, 0, 0.8);
+                span {
+                    color: #fff;
+                    font-size: 1.9rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+                    max-width: 12ch;
+                }
+                @media only screen and (max-width:900px) {
+                    min-height: 240px;
+                }
+            }
             img{
                 width: 100%;
                 height: auto;

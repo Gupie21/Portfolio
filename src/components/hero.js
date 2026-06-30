@@ -9,16 +9,16 @@ function HeroBanner() {
           <h1>
             <span className="code-text">Hello folks,</span>
             <br />
-            I´m Arturo Miranda.
+            I&apos;m Arturo Miranda.
           </h1>
           <p>
-            A software engineer that develop stunning digital
-            <br />
-            experiences who help´s business and people to stand out.
+            I craft polished digital experiences that help businesses and people stand out.
           </p>
           <CTABtn
-            text=" Know my path "
+            text="Download resume"
             src="/files/80294_Diaz_Arturo_2024-03-13.pdf"
+            download
+            ariaLabel="Download Arturo Miranda resume"
           />
         </div>
       </div>

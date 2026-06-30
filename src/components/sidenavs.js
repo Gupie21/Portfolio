@@ -3,17 +3,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-function SidenavRight(props){
+function SidenavRight(){
     return (
-        <div className='sidenav' sidenav-orientation="right">
-            <a href="mailto:arturo.miranda.diaz.1995@gmail.com">arturo.miranda.diaz.1995@gmail.com</a>
+        <div className='sidenav' data-orientation="right">
+            <a href="mailto:arturo.miranda.diaz.1995@gmail.com" aria-label="Email Arturo Miranda">arturo.miranda.diaz.1995@gmail.com</a>
         </div>
     );
 }
 
 function SidenavLeft(){
     return (
-        <div className='sidenav' sidenav-orientation="left">
+        <div className='sidenav' data-orientation="left">
             <ul>
                 <li>
                     <a href="https://github.com/gupie21" aria-label="GitHub" target="_blank" rel="noreferrer">
@@ -26,7 +26,7 @@ function SidenavLeft(){
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/arturo-miranda-diaz-542855138" aria-label="Linkedin" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/arturo-miranda-diaz-542855138" aria-label="LinkedIn" target="_blank" rel="noreferrer">
                         <LinkedInIcon/>
                     </a>
                 </li>
