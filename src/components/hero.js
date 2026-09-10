@@ -21,7 +21,7 @@ function HeroBanner() {
             />
             <CTABtn
               text="Download resume"
-              src="/files/80294_Diaz_Arturo_2024-03-13.pdf"
+              src="/files/Profile.pdf"
               download
               ariaLabel="Download Arturo Miranda resume"
             />
