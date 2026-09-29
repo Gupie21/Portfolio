@@ -364,4 +364,4 @@ const otherData = [
   },
 ];
 
-export { Portfolio };
+export { Portfolio, featureData, otherData };
