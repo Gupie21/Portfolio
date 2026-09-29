@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles/_app.scss'
 import {ThemeProvider, createTheme, responsiveFontSizes, StyledEngineProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import {HeroBanner,SidenavRight, SidenavLeft, AboutMe, Timeline, Portfolio} from './components/_components';
+import { SplitPortfolio } from './components/splitPortfolio';
 
 let theme = createTheme({
   palette: {
@@ -31,38 +31,11 @@ let theme = createTheme({
 theme = responsiveFontSizes(theme);
 
 function App() {
-  useEffect(() => {
-    const elements = document.querySelectorAll('.reveal-section');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.18 }
-    );
-
-    elements.forEach((element) => observer.observe(element));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <SidenavLeft/>
-        <main>
-          <HeroBanner/>
-          <AboutMe/>
-          <Timeline/>
-          <Portfolio/>
-        </main>
-        <SidenavRight/>
+        <SplitPortfolio />
       </ThemeProvider>
     </StyledEngineProvider>
   );
