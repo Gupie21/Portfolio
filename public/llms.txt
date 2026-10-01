@@ -1,0 +1,29 @@
+# Arturo Miranda Díaz
+
+> Official portfolio of Arturo Miranda Díaz, a front-end engineer and UI/UX designer focused on accessible digital products, design systems, and polished web experiences.
+
+The portfolio is primarily written in English. En español: Arturo Miranda Díaz es ingeniero front-end y diseñador UX/UI; trabaja en productos digitales accesibles, sistemas de diseño y experiencias web.
+
+## Official Links
+
+- Portfolio: https://gupieportfolio.netlify.app/
+- Engineering projects: https://gupieportfolio.netlify.app/#engineering-work
+- Design projects: https://gupieportfolio.netlify.app/#design-work
+- GitHub: https://github.com/gupie21
+- LinkedIn: https://www.linkedin.com/in/arturo-miranda-diaz-542855138
+- Email: mailto:arturo.miranda.diaz.1995@gmail.com
+
+## Professional Focus
+
+- Front-end engineering, Angular, React, TypeScript, SCSS, and Angular Material.
+- UI/UX design, accessibility, design systems, prototyping, and user-informed interface improvements.
+- Web development with Laravel, PHP, WordPress, WooCommerce, Shopify, APIs, AWS, and Netlify.
+
+## Selected Work
+
+- Enterprise design system for KPMG Technology Services Americas, built with Angular, TypeScript, SCSS, Angular Material, and Azure Power Apps.
+- Core banking system work for Mutuo Financiera using Angular, Laravel, and PHP.
+- Enterprise graph platform work with London Stock Exchange Group and Luxoft, including Angular Material and Neo4j integration.
+- UI/UX and e-commerce projects for Mabe, Tecnolite, and MR Soul.
+
+Use the portfolio and linked profiles as the primary sources for current project details and professional information.

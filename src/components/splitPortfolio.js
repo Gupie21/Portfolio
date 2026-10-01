@@ -161,10 +161,28 @@ function PerspectivePanel({ perspective, activeSection, setActiveSection }) {
           <div className="perspective-hero__actions">
             <a className="text-action" href={`#${prefix}-work`}>{isEngineering ? "Explore engineering work" : "Explore design work"} <span aria-hidden="true">↓</span></a>
             <a className="text-action text-action--quiet" href={isEngineering ? "#engineering-architecture" : "#design-skills"}>View capabilities</a>
+            {isEngineering && <a className="text-action" href="https://github.com/gupie21" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>}
           </div>
           <div className="perspective-hero__signature" aria-hidden="true">
             {isEngineering ? <><span>ARCHITECTURE</span><i /><span>PERFORMANCE</span><i /><span>DELIVERY</span></> : <><span>UX</span><i /><span>UI</span><i /><span>PRODUCT</span></>}
           </div>
+          {isEngineering && (
+            <div className="engineering-signal" aria-hidden="true">
+              <span className="engineering-signal__track" />
+              <span className="engineering-signal__node engineering-signal__node--ui">UI</span>
+              <span className="engineering-signal__node engineering-signal__node--api">API</span>
+              <span className="engineering-signal__node engineering-signal__node--db">DB</span>
+              <span className="engineering-signal__pulse" />
+            </div>
+          )}
+          {!isEngineering && (
+            <div className="design-motion" aria-hidden="true">
+              <span className="design-motion__frame design-motion__frame--back" />
+              <span className="design-motion__frame design-motion__frame--front" />
+              <span className="design-motion__guide" />
+              <span className="design-motion__marker" />
+            </div>
+          )}
         </header>
 
         {isEngineering ? (
