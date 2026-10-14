@@ -325,7 +325,7 @@ function SplitPortfolio() {
       <footer className="beyond-code" id="beyond-code">
         <div className="beyond-code__heading"><p>BEYOND CODE / THE PERSON BEHIND THE WORK</p><h2>Same curiosity.<br /><em>Other passions.</em></h2></div>
         <div className="beyond-code__items">
-          <article><span>01 / PHOTOGRAPHY</span><h3>Looking closer.</h3><p>Winner of a Canon photography contest. Contest name, date, and placement have not been specified.</p></article>
+          <article><span>01 / PHOTOGRAPHY</span><h3>Looking closer.</h3><p>Winner of a Canon National photography contest.</p></article>
           <article><span>02 / PLAY</span><h3>Games, for the joy of it.</h3><p>Video games are one of my personal interests and a steady source of creative inspiration.</p></article>
           <article><span>03 / SIDE PROJECTS</span><h3>Room to experiment.</h3><p>Personal projects and experiments will be added here as they are documented.</p></article>
         </div>
