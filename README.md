@@ -4,13 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## GoatCounter analytics
 
-Production builds use the custom GoatCounter count endpoint configured in `.env.production`. For local testing, add the count URL to `.env.local` in the project root:
+Production builds use the GoatCounter count URL in `.env.production`. For local testing, add the same variable to `.env.local` in the project root:
 
 ```env
-REACT_APP_GOATCOUNTER_URL=https://YOUR-SITE-CODE.goatcounter.com/count
+REACT_APP_GOATCOUNTER_URL=https://gupie.goatcounter.com/count
 ```
 
-Restart the development server after changing the value. For production, set the same variable in your hosting provider's build environment and rebuild the site. The script tracks page loads; in-section navigation uses URL fragments and is not counted as a separate page view. GoatCounter ignores localhost by default.
+Restart the development server after changing the local value, and trigger a new production deploy after changing the production URL. The script tracks page loads; in-section navigation uses URL fragments and is not counted as a separate page view. GoatCounter ignores localhost by default.
 
 ## Available Scripts
 

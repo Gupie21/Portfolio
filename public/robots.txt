@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /goat-counter
 
 Sitemap: https://gupieportfolio.netlify.app/sitemap.xml
